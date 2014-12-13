@@ -1,0 +1,22 @@
+{
+  "name": "jaumemk.github.io",
+  "version": "0.0.1",
+  "authors": [
+    "jaumemk"
+  ],
+  "description": "my github personal page",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://jaumemk.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}
