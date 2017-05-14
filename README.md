@@ -1,7 +1,7 @@
 github page repository
 ======================
 
-*My website is awailable at: [jaumemk.com](https://jaumemk.com).*
+**My website is awailable at: [jaumemk.com](http://jaumemk.com).**
 
 > I'm a developer and multi-disciplinary crossmedia designer with a wide overview of new technologies, design and communication. 
 
