@@ -1,0 +1,25 @@
+# https://jekyllrb.com/docs/configuration/
+
+# Site settings
+# Howto: {{ site.myvariable }}
+
+title: jaumemk | senior developer in barcelona
+email: ask@jaume.io
+description: > # this means to ignore newlines until "baseurl:"
+  Senior developer and multi-disciplinary crossmedia designer, coding since 1998 with a wide overview
+  of new technologies, design and communication.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+url: "https://jaumemk.com" # the base hostname & protocol.
+
+ga-track-id: "" # UA-XXXXX-Y. When its empty, script won't print on page.
+
+social-accounts:
+  twitter: jaumemk
+  github: jaumemk
+  linkedin: jaumemk
+
+sass:
+  sass_dir: _sass
+  style: compressed
