@@ -13,7 +13,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "https://jaumemk.com" # the base hostname & protocol.
 
-ga-track-id: "" # UA-XXXXX-Y. When its empty, script won't print on page.
+ga-track-id: "UA-57647312-1" # UA-XXXXX-Y. When its empty, script won't print on page.
 
 social-accounts:
   twitter: jaumemk
