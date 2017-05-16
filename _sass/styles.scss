@@ -1,19 +1,80 @@
+$gap: 1em;
+$text-color:  #666;
+$cold-color: #aaa;
+$hot-color: #111;
+$hover-color: #db4343;
+$base-weight: 300;
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
+    font-weight: $base-weight;
     font-size: 24px;
-    color: #6f6f6f;
+    color: $text-color;
     letter-spacing: -.03px;
 }
 
+.cold {
+    color: $cold-color;
+}
+
+strong .note {
+    font-weight: $base-weight;
+}
+
 a {
-    color: #333;
+    color: $hot-color;
     text-decoration: none;
     &:hover {
-        color: #db4343;
+        color: $hover-color;
     }
 }
 
@@ -47,7 +108,79 @@ hr {
     height: 1px;
     border: none;
     background: #ebebeb;
+    display: block;
+    border: 0;
+    padding: 0;
 }
+
+.list {
+    list-style: none;
+    margin: $gap 0 $gap 0;
+    padding: 0;
+    li {
+        margin: $gap 0 $gap 0;
+        padding: 0;      
+    }
+    a {
+        color: $text-color;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    time {
+        color: $cold-color;
+    }
+}
+
+p:last-of-type {
+    margin-bottom: 2*$gap;
+}
+
+#lang-switcher {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    li {
+        margin: 0;
+        padding: 0 $gap/2 0 $gap/2;
+        display: inline-block;
+        font-size: 18px;
+        border-right: 1px solid lighten($cold-color, 10%);
+        line-height: 20px;
+        &:last-of-type {
+            border-right: none;
+            padding-right: 0;
+        }
+        &:first-of-type {
+            padding-left: 0;
+        }
+        a {
+            color: $cold-color;
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+#header {
+    @extend .clearfix;
+}
+
+.title {
+    font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    font-weight: normal;
+    margin: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
 
 @media (min-width:600px) {
     #main {
@@ -55,5 +188,18 @@ hr {
     }
     #footer {
         padding: 25px 100px 25px 100px;
+    }
+    #header{
+        h1.title {
+            float: left;
+        }
+        #lang-switcher {
+            float: right;
+            margin-top: 8px;
+        }
+        &:hover {
+            #lang-switcher {
+            }
+        }
     }
 }

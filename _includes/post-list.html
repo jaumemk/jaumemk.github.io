@@ -1,0 +1,12 @@
+<ul class="list">
+	{% for post in site.posts %}
+		{% if post.highlighted %}
+		<li>
+			<article>
+				<a href="{{ post.url }}">{{ post.title }}</a><br>
+				<time datetime="{{ post.date }}">{{ post.date | date: "%Y/%m" }}</time>
+			</article>
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>

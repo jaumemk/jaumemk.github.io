@@ -3,7 +3,7 @@
 # Site settings
 # Howto: {{ site.myvariable }}
 
-title: jaumemk | senior developer in barcelona
+title: senior developer in barcelona | jaumemk
 email: ask@jaume.io
 description: > # this means to ignore newlines until "baseurl:"
   Senior developer and multi-disciplinary crossmedia designer, coding since 1998 with a wide overview
